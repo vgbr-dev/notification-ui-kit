@@ -1,10 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+/**
+ * @file Manage the main renderer process, this file is responsible for
+ * rendering the React app in the browser.
+ *
+ * @requires React
+ * @requires ReactDOM
+ */
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// » IMPORT REACT MODULES
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+// » IMPORT CSS STYLES
+import './styles/reset.css';
+import './styles/styles.css';
+
+// » IMPORT APP COMPONENT
+import App from './App';
+
+// ━━ CONSTANTS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/**
+ * The `root` it is a `HTMLElement`, where the `ReactDOM.render` application
+ * will be inserted when the `.render` method is called and enables.
+ *
+ * @type {HTMLElement}
+ */
+const root = document.getElementById('root');
+
+// ━━ RENDERER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// » MAIN RENDERER PROCESS
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
