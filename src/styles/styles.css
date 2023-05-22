@@ -1,0 +1,225 @@
+/* ━━ IMPORTS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Material-Icons.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Segoe MDL2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Segoe-MDL2.ttf") format("opentype");
+}
+
+/* ━━ GLOBAL VARIABLES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+:root {
+  --font-segoe-ui: "Segoe UI", "Helvetica Neue", arial, helvetica, sans-serif;
+  --font-segoe-ui-light: "Segoe UI Light", "Helvetica Neue", arial, helvetica, sans-serif;
+  --font-segoe-ui-mono: "Segoe UI Mono", "Helvetica Neue", arial, helvetica, sans-serif;
+  --font-segoe-mdl2: "Segoe MDL2", "Helvetica Neue", arial, helvetica, sans-serif;
+  --font-monospace: menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  --font-material-icons: "Material Icons";
+  --shadow-card:
+    rgba(0, 0, 0, 0.2)  0 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0 1px 1px 0,
+    rgba(0, 0, 0, 0.12) 0 1px 3px 0;
+  --color-shadow-rgb: 0 0 0;
+  --elevation-0:
+    0 0 0 0 rgb(var(--color-shadow-rgb), 0.2),
+    0 0 0 0 rgb(var(--color-shadow-rgb), 0.14),
+    0 0 0 0 rgb(var(--color-shadow-rgb), 0.12);
+  --elevation-1:
+    0 3px 1px -2px rgb(var(--color-shadow-rgb), 0.2),
+    0 2px 2px 0 rgb(var(--color-shadow-rgb), 0.14),
+    0 1px 5px 0 rgb(var(--color-shadow-rgb), 0.12);
+  --elevation-2:
+    0 2px 4px -1px rgb(var(--color-shadow-rgb), 0.2),
+    0 4px 5px 0 rgb(var(--color-shadow-rgb), 0.14),
+    0 1px 10 0 rgb(var(--color-shadow-rgb), 0.12);
+  --elevation-3:
+    0 5px 5px -3px rgb(var(--color-shadow-rgb), 0.2),
+    0 8px 10 1px rgb(var(--color-shadow-rgb), 0.14),
+    0 3px 14px 2px rgb(var(--color-shadow-rgb), 0.12);
+  --elevation-4:
+    0 5px 5px -3px rgb(var(--color-shadow-rgb), 0.2),
+    0 8px 10 1px rgb(var(--color-shadow-rgb), 0.14),
+    0 3px 14px 2px rgb(var(--color-shadow-rgb), 0.12);
+  --elevation-5:
+    0 8px 10 -6px rgb(var(--color-shadow-rgb), 0.2),
+    0 16px 24px 2px rgb(var(--color-shadow-rgb), 0.14),
+    0 6px 30 5px rgb(var(--color-shadow-rgb), 0.12);
+  --color-background: #242424;
+  --color-on-background: #CCCCCC;
+  --color-default: #B4009E;
+  --color-success: #3AB65C;
+  --color-error: #BF333B;
+  --color-information: #1898C0;
+  --color-warning: #BC8C12;
+  --color-default-hover: #943670;
+  --color-success-hover: #2D8A46;
+  --color-error-hover: #962A31;
+  --color-information-hover:  #147FA0;
+  --color-warning-hover:#9B7512;
+}
+
+/* ━━ ELEMENT SELECTORS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+body {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-segoe-ui);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+
+h2 {
+  margin: 0.75em 0;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 0.83em 0;
+  font-size: 1.17em;
+}
+
+h5 {
+  margin: 1.5em 0;
+  font-size: 0.83em;
+}
+
+h6 {
+  margin: 1.67em 0;
+  font-size: 0.75em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* ━━ ID STYLES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+#root {
+	display: flex;
+	height: 100vh;
+	max-height: 100vh;
+	flex-flow: column nowrap;
+	padding-top: 100px;
+	padding-left: 200px;
+	gap: 50px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+/* ━━ BEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* » COMPONENT: app-header */
+.app-header {
+	display: flex;
+	height: 280px;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.app-header__title,
+.app-header__subtitle {
+  margin: 0;
+}
+
+.app-header__title {
+	font-size: 80px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.app-header__subtitle {
+	font-size: 80px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.app-header__subtitle--accent {
+  color: var(--color-default);
+}
+
+.app-header__description {
+	width: 750px;
+	font-size: 19px;
+	font-weight: 600;
+}
+
+/* » COMPONENT: button-container */
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+	gap: 20px;
+}
+
+.button-container__button {
+  padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background: #000000;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 20px;
+	transition: 0.3s ease all;
+}
+
+.button-container__button--default {
+  background: var(--color-default);
+}
+
+.button-container__button--default:hover {
+  background: var(--color-default-hover);
+}
+
+.button-container__button--success {
+  background: var(--color-success);
+}
+
+.button-container__button--success:hover {
+  background: var(--color-success-hover);
+}
+
+.button-container__button--error {
+  background: var(--color-error);
+}
+
+.button-container__button--error:hover {
+  background: var(--color-error-hover);
+}
+
+.button-container__button--information {
+  background: var(--color-information);
+}
+
+.button-container__button--information:hover {
+  background: var(--color-information-hover);
+}
+
+.button-container__button--warning {
+  background: var(--color-warning);
+}
+
+.button-container__button--warning:hover {
+  background: var(--color-warning-hover);
+}
