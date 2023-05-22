@@ -4,7 +4,7 @@
  */
 
 // » IMPORT COMPONENTS
-import ButtonContainer from '../../ButtonContainer';
+import ButtonContainer from '../ButtonContainer';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
