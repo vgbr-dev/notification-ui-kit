@@ -115,6 +115,15 @@ p {
   margin-bottom: 1rem;
 }
 
+kbd {
+	display: inline-block;
+	padding: 0.1em 0.5em;
+	border-radius: 4px;
+	margin: 0 0.2em;
+	background-color: #1E1F1C;
+	color: #BDBDBC;
+}
+
 /* ━━ ID SELECTORS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 #root {
 	display: flex;
