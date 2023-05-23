@@ -73,7 +73,7 @@ import Portal from '../components/common/Portal';
  * The draggable modal object.
  *
  * @typedef  {object}          DraggableModalHook
- * @property {React.Component} Portal             - The React component for rendering the modal portal.
+ * @property {React.Component} Modal              - The React component for rendering the modal portal.
  * @property {HandleMouseDown} handleMouseDown    - The function to handle the mouse down event.
  * @property {OpenModal}       openModal          - The function to open the modal.
  * @property {CloseModal}      closeModal         - The function to close the modal.
