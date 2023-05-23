@@ -6,13 +6,13 @@
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT REACT MODULES
 import React from 'react';
-import { PropTypes } from 'prop-types';
 
 // » IMPORT CUSTOM HOOKS
 import usePopOver from '../../../hooks/usePopOver';
 
 // » IMPORT COMPONENTS
 import Button from '../../common/Button';
+import PopOverContent from './PopOverContent';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -21,7 +21,7 @@ import Button from '../../common/Button';
  * @component
  * @returns {JSX.Element} The rendered component.
  */
-const PopOverButton = ({ children }) => {
+const PopOverButton = () => {
   const { PopOver, togglePopOver } = usePopOver({
     id: 'popover',
     className: 'popover-container',
@@ -31,13 +31,11 @@ const PopOverButton = ({ children }) => {
   return (
     <React.Fragment key="Modal">
       <Button modifier="default" text="Pop-Over" onClick={togglePopOver} />
-      <PopOver>{children}</PopOver>
+      <PopOver>
+        <PopOverContent />
+      </PopOver>
     </React.Fragment>
   );
-};
-
-PopOverButton.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 // ━━ EXPORT MODULE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
