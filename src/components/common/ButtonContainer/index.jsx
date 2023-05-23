@@ -30,9 +30,10 @@ const ButtonContainer = () => (
     <button type="button" className="button-container__button button-container__button--warning">
       Warning
     </button>
-    <button type="button" className="button-container__button button-container__button--default">
-      Pop-up
-    </button>
+    <PopUpButton>
+      <h1>Hi! 😊</h1>
+      <p>I am a Pop-up Modal, click outside of me if you want to close me</p>
+    </PopUpButton>
     <ModalButton>
       <h1>Hi! 😊</h1>
       <p>I am a Movable Modal</p>
