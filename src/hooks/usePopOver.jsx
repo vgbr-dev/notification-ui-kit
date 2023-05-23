@@ -1,6 +1,6 @@
 /**
- * @file Manage `usePopUpModal` custom React Hook.
- * @module usePopUpModal
+ * @file Manage `usePopOver` custom React Hook.
+ * @module usePopOver
  */
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
