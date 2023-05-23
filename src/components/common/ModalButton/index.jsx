@@ -39,7 +39,7 @@ const ModalButton = ({ children }) => {
       </button>
       <Modal>
         <TitleBar title="Modal" close={closeModal} onMouseDown={handleMouseDown} />
-        <section className="modal-container__content">{children}</section>
+        {children}
       </Modal>
     </React.Fragment>
   );
