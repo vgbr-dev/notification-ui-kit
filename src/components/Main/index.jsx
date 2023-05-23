@@ -5,7 +5,7 @@
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT COMPONENTS
-import ButtonContainer from '../ButtonContainer';
+import ButtonBox from '../ButtonBox';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -16,7 +16,7 @@ import ButtonContainer from '../ButtonContainer';
  */
 const Main = () => (
   <main id="main-wrapper">
-    <ButtonContainer />
+    <ButtonBox />
   </main>
 );
 
