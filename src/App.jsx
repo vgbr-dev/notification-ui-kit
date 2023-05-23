@@ -9,8 +9,8 @@ import React from 'react';
 // » IMPORT HOOKS
 
 // » IMPORT COMPONENTS
-import Header from './components/common/Header';
-import Main from './components/common/Main';
+import Header from './components/Header';
+import Main from './components/Main';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
