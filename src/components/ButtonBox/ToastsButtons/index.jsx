@@ -12,6 +12,7 @@ import useToasts from '../../../hooks/useToasts';
 import Toasts from '../../common/Toasts';
 
 // » IMPORT COMPONENTS
+import Button from '../../common/Button';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -61,38 +62,10 @@ const ToastsButtons = () => {
 
   return (
     <React.Fragment key="ButtonBox">
-      <button
-        type="button"
-        className="button-container__button button-container__button--success"
-        data-type="success"
-        onClick={addSuccesToast}
-      >
-        Exito
-      </button>
-      <button
-        type="button"
-        className="button-container__button button-container__button--error"
-        data-type="error"
-        onClick={addErrorToast}
-      >
-        Error
-      </button>
-      <button
-        type="button"
-        className="button-container__button button-container__button--information"
-        data-type="information"
-        onClick={addInfoToast}
-      >
-        Information
-      </button>
-      <button
-        type="button"
-        className="button-container__button button-container__button--warning"
-        data-type="warning"
-        onClick={addWarningToast}
-      >
-        Warning
-      </button>
+      <Button modifier="success" text="Exito" onClick={addSuccesToast} />
+      <Button modifier="error" text="Error" onClick={addErrorToast} />
+      <Button modifier="information" text="Information" onClick={addInfoToast} />
+      <Button modifier="warning" text="Warning" onClick={addWarningToast} />
       <Toasts toasts={toasts} closeToast={closeToast} />
     </React.Fragment>
   );
