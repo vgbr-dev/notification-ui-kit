@@ -7,6 +7,7 @@
 import ModalButton from '../ModalButton';
 import ModalContainer from '../ModalContainer';
 import PopUpButton from '../PopUpButton';
+import PopUpContainer from '../PopUpContainer';
 import ToastsButtons from '../ToastsButtons';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -20,8 +21,7 @@ const ButtonContainer = () => (
   <div className="button-container">
     <ToastsButtons />
     <PopUpButton>
-      <h1>Hi! 😊</h1>
-      <p>I am a Pop-up Modal, click outside of me if you want to close me</p>
+      <PopUpContainer />
     </PopUpButton>
     <ModalButton>
       <ModalContainer />

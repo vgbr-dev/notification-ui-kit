@@ -34,9 +34,7 @@ const PopUpButton = ({ children }) => {
       >
         Pop-up
       </button>
-      <PopUp>
-        <section className="popup-container__content">{children}</section>
-      </PopUp>
+      <PopUp>{children}</PopUp>
     </React.Fragment>
   );
 };
