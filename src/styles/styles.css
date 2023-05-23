@@ -323,3 +323,19 @@ p {
 	height: 100%;
 	padding: 10px;
 }
+
+/* » COMPONENT: popup-container */
+.popup-container {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.popup-container__content {
+	height: 100%;
+	padding: 10px;
+}
