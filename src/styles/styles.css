@@ -175,14 +175,14 @@ p {
 	font-weight: 600;
 }
 
-/* » COMPONENT: button-container */
-.button-container {
+/* » COMPONENT: button-box */
+.button-box {
   display: flex;
   flex-flow: row nowrap;
 	gap: 20px;
 }
 
-.button-container__button {
+.button-box__button {
   padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
@@ -193,43 +193,43 @@ p {
 	transition: 0.3s ease all;
 }
 
-.button-container__button--default {
+.button-box__button--default {
   background: var(--color-default);
 }
 
-.button-container__button--default:hover {
+.button-box__button--default:hover {
   background: var(--color-default-hover);
 }
 
-.button-container__button--success {
+.button-box__button--success {
   background: var(--color-success);
 }
 
-.button-container__button--success:hover {
+.button-box__button--success:hover {
   background: var(--color-success-hover);
 }
 
-.button-container__button--error {
+.button-box__button--error {
   background: var(--color-error);
 }
 
-.button-container__button--error:hover {
+.button-box__button--error:hover {
   background: var(--color-error-hover);
 }
 
-.button-container__button--information {
+.button-box__button--information {
   background: var(--color-information);
 }
 
-.button-container__button--information:hover {
+.button-box__button--information:hover {
   background: var(--color-information-hover);
 }
 
-.button-container__button--warning {
+.button-box__button--warning {
   background: var(--color-warning);
 }
 
-.button-container__button--warning:hover {
+.button-box__button--warning:hover {
   background: var(--color-warning-hover);
 }
 
