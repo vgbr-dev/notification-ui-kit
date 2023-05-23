@@ -1,24 +1,24 @@
 /**
- * @file Contains `ButtonContainer` React components.
+ * @file Contains `ButtonBox` React components.
  * @module ButtonContainer
  */
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT COMPONENTS
-import ModalButton from '../ModalButton';
-import ModalContainer from '../ModalContainer';
-import PopUpButton from '../PopUpButton';
-import PopUpContainer from '../PopUpContainer';
-import ToastsButtons from '../ToastsButtons';
+import ModalButton from './ModalButton';
+import ModalContainer from './ModalContainer';
+import PopUpButton from './PopUpButton';
+import PopUpContainer from './PopUpContainer';
+import ToastsButtons from './ToastsButtons';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * The `ButtonContainer` component.
+ * The `ButtonBox` component.
  *
  * @component
  * @returns {JSX.Element} The rendered component.
  */
-const ButtonContainer = () => (
-  <div className="button-container">
+const ButtonBox = () => (
+  <div className="button-box">
     <ToastsButtons />
     <PopUpButton>
       <PopUpContainer />
@@ -30,4 +30,4 @@ const ButtonContainer = () => (
 );
 
 // ━━ EXPORT MODULE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-export default ButtonContainer;
+export default ButtonBox;
