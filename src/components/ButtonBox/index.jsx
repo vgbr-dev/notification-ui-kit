@@ -6,8 +6,8 @@
 // » IMPORT COMPONENTS
 import ModalButton from './ModalButton';
 import ModalContainer from './ModalContainer';
-import PopUpButton from './PopUpButton';
-import PopUpContainer from './PopUpContainer';
+import PopOverButton from './PopOverButton';
+import PopOverContainer from './PopOverContainer';
 import ToastsButtons from './ToastsButtons';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -20,9 +20,9 @@ import ToastsButtons from './ToastsButtons';
 const ButtonBox = () => (
   <div className="button-box">
     <ToastsButtons />
-    <PopUpButton>
-      <PopUpContainer />
-    </PopUpButton>
+    <PopOverButton>
+      <PopOverContainer />
+    </PopOverButton>
     <ModalButton>
       <ModalContainer />
     </ModalButton>
