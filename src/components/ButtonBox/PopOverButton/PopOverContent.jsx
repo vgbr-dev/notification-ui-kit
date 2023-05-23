@@ -13,7 +13,9 @@
 const PopOverContent = () => (
   <section className="popover-container__content">
     <h1>Hi! 😊</h1>
-    <p>I am a Pop-up Modal, click outside of me if you want to close me</p>
+    <p>
+      I am a Pop-Over Modal, Press <kbd>ESC</kbd> if you want to close me
+    </p>
   </section>
 );
 
