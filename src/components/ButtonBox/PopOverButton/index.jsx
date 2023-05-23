@@ -26,6 +26,7 @@ const PopOverButton = () => {
     id: 'popover',
     className: 'popover-container',
     position: { x: '45%', y: '60%' },
+    closeOnClickOutside: false,
   });
 
   return (
