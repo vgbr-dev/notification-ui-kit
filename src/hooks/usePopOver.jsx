@@ -100,7 +100,7 @@ const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
 
   useEffect(() => {
     const handleClickOutside = event => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
         setVisibility(false);
       }
     };
