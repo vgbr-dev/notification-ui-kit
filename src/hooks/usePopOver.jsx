@@ -79,7 +79,7 @@ const appendChildToBody = element => {
  * @returns {PopOverHook} - The Pop-over modal object.
  * @example const { PopOver, togglePopOver, closePopOver } = usePopOver(options);
  */
-const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
+const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
   const [visibility, setVisibility] = useState(false);
   const rootElement = document.createElement('div');
   const modalRef = useRef(rootElement);
@@ -158,4 +158,4 @@ const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
 };
 
 // ━━ EXPORT MODULE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-export default usePopUpModal;
+export default usePopOver;
