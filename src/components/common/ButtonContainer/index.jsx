@@ -35,7 +35,7 @@ const ButtonContainer = () => (
     </button>
     <ModalButton>
       <h1>Hi! 😊</h1>
-      <p>I am a draggable Modal</p>
+      <p>I am a Movable Modal</p>
     </ModalButton>
   </div>
 );
