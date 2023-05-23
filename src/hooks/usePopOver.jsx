@@ -144,7 +144,7 @@ const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
   /**
    * The React component for rendering the Pop-over portal.
    *
-   * @param {object} props - The component props.
+   * @param {object} props - The component properties.
    * @param {React.ReactNode} props.children - The children to render within the portal component.
    * @returns {React.Component| null} - The rendered PopOver portal.
    */
