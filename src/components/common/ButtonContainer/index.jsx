@@ -2,6 +2,9 @@
  * @file Contains `ButtonContainer` React components.
  * @module ButtonContainer
  */
+// ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// » IMPORT COMPONENTS
+import ModalButton from '../ModalButton';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -30,9 +33,10 @@ const ButtonContainer = () => (
     <button type="button" className="button-container__button button-container__button--default">
       Pop-up
     </button>
-    <button type="button" className="button-container__button button-container__button--default">
-      Modal
-    </button>
+    <ModalButton>
+      <h1>Hi! 😊</h1>
+      <p>I am a draggable Modal</p>
+    </ModalButton>
   </div>
 );
 
