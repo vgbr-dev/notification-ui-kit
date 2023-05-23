@@ -1,6 +1,6 @@
 /**
- * @file Contains `PopUpButton` React components.
- * @module PopUpButton
+ * @file Contains `PopOverButton` React components.
+ * @module PopOverButton
  */
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -16,15 +16,15 @@ import Button from '../../common/Button';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * The `PopUpButton` component.
+ * The `PopOverButton` component.
  *
  * @component
  * @returns {JSX.Element} The rendered component.
  */
-const PopUpButton = ({ children }) => {
+const PopOverButton = ({ children }) => {
   const { PopOver, togglePopOver } = usePopOver({
-    id: 'popup',
-    className: 'popup-container',
+    id: 'popover',
+    className: 'popover-container',
     position: { x: '45%', y: '60%' },
   });
 
@@ -36,9 +36,9 @@ const PopUpButton = ({ children }) => {
   );
 };
 
-PopUpButton.propTypes = {
+PopOverButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
 // ━━ EXPORT MODULE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-export default PopUpButton;
+export default PopOverButton;
