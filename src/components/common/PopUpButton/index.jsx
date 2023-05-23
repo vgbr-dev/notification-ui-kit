@@ -9,7 +9,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 
 // » IMPORT CUSTOM HOOKS
-import usePopUpModal from '../../../hooks/usePopUpModal';
+import usePopOver from '../../../hooks/usePopOver';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -19,7 +19,7 @@ import usePopUpModal from '../../../hooks/usePopUpModal';
  * @returns {JSX.Element} The rendered component.
  */
 const PopUpButton = ({ children }) => {
-  const { PopUp, togglePopUp } = usePopUpModal({
+  const { PopOver, togglePopOver } = usePopOver({
     id: 'popup',
     className: 'popup-container',
     position: { x: '45%', y: '60%' },
@@ -30,11 +30,11 @@ const PopUpButton = ({ children }) => {
       <button
         type="button"
         className="button-container__button button-container__button--default"
-        onClick={togglePopUp}
+        onClick={togglePopOver}
       >
         Pop-up
       </button>
-      <PopUp>{children}</PopUp>
+      <PopOver>{children}</PopOver>
     </React.Fragment>
   );
 };
