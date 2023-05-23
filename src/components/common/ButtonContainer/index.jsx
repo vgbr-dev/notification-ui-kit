@@ -6,6 +6,7 @@
 // » IMPORT COMPONENTS
 import ModalButton from '../ModalButton';
 import PopUpButton from '../PopUpButton';
+import ToastsButtons from '../ToastsButtons';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -16,21 +17,7 @@ import PopUpButton from '../PopUpButton';
  */
 const ButtonContainer = () => (
   <div className="button-container">
-    <button type="button" className="button-container__button button-container__button--success">
-      Exito
-    </button>
-    <button type="button" className="button-container__button button-container__button--error">
-      Error
-    </button>
-    <button
-      type="button"
-      className="button-container__button button-container__button--information"
-    >
-      Information
-    </button>
-    <button type="button" className="button-container__button button-container__button--warning">
-      Warning
-    </button>
+    <ToastsButtons />
     <PopUpButton>
       <h1>Hi! 😊</h1>
       <p>I am a Pop-up Modal, click outside of me if you want to close me</p>
