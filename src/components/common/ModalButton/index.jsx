@@ -23,7 +23,7 @@ import TitleBar from '../TitleBar';
  */
 const ModalButton = ({ children }) => {
   const { Modal, handleMouseDown, toggleModal, closeModal } = useDraggableModal({
-    id: 'popup',
+    id: 'modal',
     className: 'modal-container',
     initialPosition: { x: '15%', y: '60%' },
   });
