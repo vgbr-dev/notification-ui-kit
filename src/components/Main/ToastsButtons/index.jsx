@@ -9,7 +9,7 @@ import React from 'react';
 
 // » IMPORT HOOKS
 import useToasts from '../../../hooks/useToasts';
-import Toasts from '../Toasts';
+import Toasts from '../../common/Toasts';
 
 // » IMPORT COMPONENTS
 
