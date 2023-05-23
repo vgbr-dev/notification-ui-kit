@@ -1,6 +1,6 @@
 /**
- * @file Contains ` ModalButton` React components.
- * @module  ModalButton
+ * @file Contains `ModalButton` React components.
+ * @module ModalButton
  */
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -16,7 +16,7 @@ import TitleBar from '../TitleBar';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * The ` ModalButton` component.
+ * The `ModalButton` component.
  *
  * @component
  * @returns {JSX.Element} The rendered component.
