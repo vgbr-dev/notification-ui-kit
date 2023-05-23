@@ -115,21 +115,21 @@ const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
   /**
    * The function to open the Pop-over component.
    */
-  const openPopUp = () => {
+  const openPopOver = () => {
     setVisibility(true);
   };
 
   /**
    * The function to close the Pop-over component.
    */
-  const closePopUp = () => {
+  const closePopOver = () => {
     setVisibility(false);
   };
 
   /**
    * The function to toggle the state (open/close) Pop-over component visibility.
    */
-  const togglePopUp = () => {
+  const togglePopOver = () => {
     setVisibility(!visibility);
   };
 
@@ -150,10 +150,10 @@ const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
   };
 
   return {
-    PopUp,
-    openPopUp,
-    closePopUp,
-    togglePopUp,
+    PopOver,
+    openPopOver,
+    closePopOver,
+    togglePopOver,
   };
 };
 
