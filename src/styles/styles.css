@@ -312,6 +312,183 @@ p {
   background-color: #DD2E2E;
 }
 
+/* » COMPONENT: toasts */
+#toasts-container {
+	position: fixed;
+  right: 0;
+  bottom: 0;
+	width: 100%;
+	max-width: 400px;
+	flex-direction: column-reverse;
+	gap: 20px;
+}
+
+.toasts {
+	display: flex;
+}
+
+.toast {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	justify-content: space-between;
+	border-radius: 10px;
+  animation: opening 200ms ease-out;
+	background-color: #CCCCCC;
+}
+
+@keyframes opening {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.toast--auto-close {
+  animation: auto-close-closing 200ms forwards ease-out 4.8s;
+}
+
+.toast--auto-close::after {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+  animation: auto-close 5s forwards ease-out;
+	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+}
+
+@keyframes auto-close-closing {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes auto-close {
+	from {
+		width: 100%;
+	}
+
+	to {
+		width: 0%;
+	}
+}
+
+.toast--closing {
+	animation: closing 200ms forwards ease-out;
+}
+
+@keyframes closing {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+.toast--success {
+	background-color: #3AB65C;
+}
+
+.toast--error {
+	background-color: #BF333B;
+}
+
+.toast--information {
+	background-color: #1898C0;
+}
+
+.toast--warning {
+	background-color: #BC8C12;
+}
+
+.toast__content {
+	display: grid;
+	align-items: center;
+	padding: 15px;
+	gap: 15px;
+	grid-template-columns: 30px auto;
+}
+
+.toast__icon {
+  display: inline-flex;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+	color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  direction: ltr;
+  font-family: var(--font-material-icons);
+  font-feature-settings: "liga";
+  font-size: 1.5em;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.toast__title {
+	margin-bottom: 5px;
+  font-size: 20px;
+	font-weight: 600;
+}
+
+.toast__control {
+	display: flex;
+  width: 35px;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.1);
+	transition: 0.3s ease all;
+}
+
+.toast__control:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.toast__close-button {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+	color: #FFFFFF;
+  cursor: pointer;
+  direction: ltr;
+  font-family: var(--font-material-icons);
+  font-feature-settings: "liga";
+  font-size: 1.5em;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 /* » COMPONENT: modal-container */
 .modal-container {
   position: fixed;
