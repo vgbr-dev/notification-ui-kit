@@ -20,7 +20,7 @@ import { PropTypes } from 'prop-types';
 const Button = ({ modifier, text, onClick }) => (
   <button
     type="button"
-    className={`button-container__button button-container__button--${modifier}`}
+    className={`button-box__button button-box__button--${modifier}`}
     onClick={onClick}
   >
     {text}
