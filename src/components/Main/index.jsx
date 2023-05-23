@@ -5,7 +5,7 @@
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT COMPONENTS
-import ButtonContainer from '../ButtonContainer';
+import ButtonContainer from '../common/ButtonContainer';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
