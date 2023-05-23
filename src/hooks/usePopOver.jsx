@@ -80,7 +80,7 @@ const appendChildToBody = element => {
  * @returns {PopOverHook} - The Pop-over modal object.
  * @example const { PopOver, togglePopOver, closePopOver } = usePopOver(options);
  */
-const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
+const usePopOver = ({ id, className, closeOnClickOutside = false, position = { x: 0, y: 0 } }) => {
   const [visibility, setVisibility] = useState(false);
   const rootElement = document.createElement('div');
   const containerRef = useRef(rootElement);
@@ -101,7 +101,8 @@ const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
 
   useEffect(() => {
     const handleClickOutside = event => {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
+      const shouldClose = closeOnClickOutside && containerRef.current && !containerRef.current.contains(event.target); // eslint-disable-line prettier/prettier
+      if (shouldClose) {
         setVisibility(false);
       }
     };
@@ -119,7 +120,7 @@ const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [closeOnClickOutside]);
 
   /**
    * The function to open the Pop-over component.
