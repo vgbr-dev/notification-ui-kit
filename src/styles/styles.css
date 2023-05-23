@@ -129,6 +129,11 @@ p {
 	overflow-y: hidden;
 }
 
+#popup {
+  width: 300px;
+  height: 200px;
+}
+
 /* ━━ BEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 /* » COMPONENT: app-header */
@@ -222,4 +227,99 @@ p {
 
 .button-container__button--warning:hover {
   background: var(--color-warning-hover);
+}
+
+/* » COMPONENT: titlebar */
+.titlebar {
+  display: flex;
+  height: 35px;
+  min-height: 35px;
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #8C8C8C;
+  -webkit-app-region: drag;
+  background-color: #1E1F1C;
+  color: #BDBDBC;
+  user-select: none;
+}
+
+.titlebar--nodrag {
+  -webkit-app-region: no-drag;
+}
+
+.titlebar--modal {
+  height: 25px;
+  -webkit-app-region: no-drag;
+  font-size: 0.8em;
+}
+
+.titlebar__app {
+  display: flex;
+  height: 100%;
+  flex: 1 1 auto;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.titlebar__app-icon {
+  display: flex;
+  width: 2.8125em;
+  height: 100%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  -webkit-app-region: drag;
+  font-family: var(--font-segoe-mdl2);
+}
+
+.titlebar__buttons {
+  display: flex;
+  height: 100%;
+  flex-flow: row nowrap;
+  gap: 2px;
+}
+
+.titlebar__button {
+  display: flex;
+  width: 2.8125em;
+  height: 100%;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0;
+  -webkit-app-region: no-drag;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-segoe-mdl2);
+  user-select: none;
+}
+
+.titlebar__button:hover {
+  background-color: #3C3D3A;
+}
+
+.titlebar__button--close:hover {
+  background-color: #DD2E2E;
+}
+
+/* » COMPONENT: modal-container */
+.modal-container {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.modal-container__content {
+	height: 100%;
+	padding: 10px;
 }
