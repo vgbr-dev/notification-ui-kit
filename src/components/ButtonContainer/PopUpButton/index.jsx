@@ -11,6 +11,9 @@ import { PropTypes } from 'prop-types';
 // » IMPORT CUSTOM HOOKS
 import usePopOver from '../../../hooks/usePopOver';
 
+// » IMPORT COMPONENTS
+import Button from '../../common/Button';
+
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
  * The `PopUpButton` component.
@@ -27,13 +30,7 @@ const PopUpButton = ({ children }) => {
 
   return (
     <React.Fragment key="Modal">
-      <button
-        type="button"
-        className="button-container__button button-container__button--default"
-        onClick={togglePopOver}
-      >
-        Pop-up
-      </button>
+      <Button modifier="default" text="Pop-Over" onClick={togglePopOver} />
       <PopOver>{children}</PopOver>
     </React.Fragment>
   );
