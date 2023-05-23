@@ -13,6 +13,7 @@ import useDraggableModal from '../../../hooks/useDraggableModal';
 
 // » IMPORT COMPONENTS
 import TitleBar from '../TitleBar';
+import Button from '../../common/Button';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -30,13 +31,7 @@ const ModalButton = ({ children }) => {
 
   return (
     <React.Fragment key="Modal">
-      <button
-        type="button"
-        className="button-container__button button-container__button--default"
-        onClick={toggleModal}
-      >
-        Modal
-      </button>
+      <Button modifier="default" text="Modal" onClick={toggleModal} />
       <Modal>
         <TitleBar title="Movable Modal" close={closeModal} onMouseDown={handleMouseDown} />
         {children}
