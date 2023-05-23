@@ -24,7 +24,7 @@ import TitleBar from '../TitleBar';
 const ModalButton = ({ children }) => {
   const { Portal, handleMouseDown, toggleModal, closeModal } = useDraggableModal({
     id: 'popup',
-    className: 'modal',
+    className: 'modal-container',
     initialPosition: { x: '15%', y: '60%' },
   });
 
@@ -39,7 +39,7 @@ const ModalButton = ({ children }) => {
       </button>
       <Portal>
         <TitleBar title="Modal" close={closeModal} onMouseDown={handleMouseDown} />
-        <section className="modal-container">{children}</section>
+        <section className="modal-container__content">{children}</section>
       </Portal>
     </React.Fragment>
   );
