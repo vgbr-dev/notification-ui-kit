@@ -1,6 +1,6 @@
 /**
  * @file Contains ` TitleBar` React components.
- * @module  TitleBar
+ * @module TitleBar
  */
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
