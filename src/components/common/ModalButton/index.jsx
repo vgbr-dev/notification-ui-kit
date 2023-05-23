@@ -22,7 +22,7 @@ import TitleBar from '../TitleBar';
  * @returns {JSX.Element} The rendered component.
  */
 const ModalButton = ({ children }) => {
-  const { Portal, handleMouseDown, toggleModal, closeModal } = useDraggableModal({
+  const { Modal, handleMouseDown, toggleModal, closeModal } = useDraggableModal({
     id: 'popup',
     className: 'modal-container',
     initialPosition: { x: '15%', y: '60%' },
@@ -37,10 +37,10 @@ const ModalButton = ({ children }) => {
       >
         Modal
       </button>
-      <Portal>
+      <Modal>
         <TitleBar title="Modal" close={closeModal} onMouseDown={handleMouseDown} />
         <section className="modal-container__content">{children}</section>
-      </Portal>
+      </Modal>
     </React.Fragment>
   );
 };
