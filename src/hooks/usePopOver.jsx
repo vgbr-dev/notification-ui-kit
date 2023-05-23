@@ -6,10 +6,8 @@
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT REACT MODULES
 import { useState, useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
-// » IMPORT COMPONENTS
-import Portal from '../components/common/Portal';
 
 // ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -142,13 +140,12 @@ const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
    * @param {React.ReactNode} props.children - The children to render within the portal component.
    * @returns {React.Component| null} - The rendered PopOver portal.
    */
-  const PopUp = ({ children }) => (
-    <Portal visibility={visibility} target={modalRef.current}>
-      {children}
-    </Portal>
-  );
+  const PopOver = ({ children }) => {
+    const condition = visibility && containerRef.currentt !== null;
+    return condition ? ReactDOM.createPortal(children, containerRef.current) : null;
+  };
 
-  PopUp.propTypes = {
+  PopOver.propTypes = {
     children: PropTypes.node.isRequired,
   };
 
