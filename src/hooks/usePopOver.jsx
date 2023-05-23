@@ -82,14 +82,14 @@ const appendChildToBody = element => {
 const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
   const [visibility, setVisibility] = useState(false);
   const rootElement = document.createElement('div');
-  const modalRef = useRef(rootElement);
-  modalRef.current.setAttribute('id', id);
-  modalRef.current.setAttribute('class', className);
-  modalRef.current.style.left = position.x;
-  modalRef.current.style.top = position.y;
+  const containerRef = useRef(rootElement);
+  containerRef.current.setAttribute('id', id);
+  containerRef.current.setAttribute('class', className);
+  containerRef.current.style.left = position.x;
+  containerRef.current.style.top = position.y;
 
   useEffect(() => {
-    const element = modalRef.current;
+    const element = containerRef.current;
     if (visibility) {
       appendChildToBody(element);
     }
