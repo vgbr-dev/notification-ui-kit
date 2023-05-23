@@ -13,20 +13,20 @@ import Portal from '../components/common/Portal';
 
 // ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * The initial position of the Pop-up modal (default: { x: 0, y: 0 }).
+ * The position of the Pop-over (default: { x: 0, y: 0 }).
  *
  * @typedef  {object} Position
- * @property {string} x        - The initial position on the x-axis.
- * @property {string} y        - The initial position on the y-axis.
+ * @property {string} x        - The position on the x-axis.
+ * @property {string} y        - The position on the y-axis.
  */
 
 /**
- * The options for the Pop-up modal.
+ * The options for the Pop-over hook.
  *
- * @typedef  {object}   PopUpModalOptions
- * @property {Position} Position          - The initial position of the Pop-up modal (default: { x: 0, y: 0 }).
- * @property {string}   className         - The CSS class name for the Pop-up modal.
- * @property {string}   id                - The ID attribute for the Pop-up modal.
+ * @typedef  {object}   PopOverOptions
+ * @property {Position} Position       - The position of the Pop-over (default: { x: 0, y: 0 }).
+ * @property {string}   className      - The CSS class name for the Pop-over.
+ * @property {string}   id             - The ID attribute for the Pop-over.
  */
 
 /**
@@ -36,31 +36,31 @@ import Portal from '../components/common/Portal';
  */
 
 /**
- * The function to open the Pop-up Modal.
+ * The function to open the Pop-over component.
  *
- * @typedef {() => void} OpenPopUp
+ * @typedef {() => void} OpenPopOver
  */
 
 /**
- * The function to close the Pop-up Modal.
+ * The function to close the Pop-over component.
  *
- * @typedef {() => void} ClosePopUp
+ * @typedef {() => void} ClosePopOver
  */
 
 /**
- * The function to toggle Pop-up Modal visibility.
+ * The function to toggle the state (open/close) Pop-over component visibility.
  *
- * @typedef {() => void} TogglePopUp
+ * @typedef {() => void} TogglePopOver
  */
 
 /**
- * The Pop-up Modal object.
+ * An object containing Pop-over component-related functions and state.
  *
- * @typedef  {object}          PopUpModalHook
- * @property {React.Component} PopUp           - The React component for rendering the Pop-up portal.
- * @property {OpenModal}       openPopUp       - The function to open the modal.
- * @property {CloseModal}      closePopUp      - The function to close the modal.
- * @property {ToggleModal}     togglePopUp     - The function to toggle modal visibility.
+ * @typedef  {object}          PopOverHook
+ * @property {React.Component} PopOver       - The React component for rendering the Pop-over portal.
+ * @property {OpenPopOver}     openPopOver   - The function to open the Pop-over component.
+ * @property {ClosePopOver}    closePopOver  - The function to close the Pop-over component.
+ * @property {TogglePopOver}   togglePopOver - The function to toggle Pop-over component visibility.
  */
 
 // ━━ FUNCTIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -75,11 +75,11 @@ const appendChildToBody = element => {
 
 // ━━ CUSTOM HOOK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * Custom React hook for managing a Pop-up modal.
+ * Custom React hook for managing a Pop-over component.
  *
- * @param {PopUpModalOptions} options - The options for the Pop-up modal.
- * @returns {PopUpModalHook} - The Pop-up modal object.
- * @example const { PopUp, togglePopUp, closePopUp } = usePopUpModal(options);
+ * @param {PopOverOptions} options - The options for the Pop-over hook.
+ * @returns {PopOverHook} - The Pop-over modal object.
+ * @example const { PopOver, togglePopOver, closePopOver } = usePopOver(options);
  */
 const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
   const [visibility, setVisibility] = useState(false);
@@ -115,32 +115,32 @@ const usePopUpModal = ({ position = { x: 0, y: 0 }, className, id }) => {
   }, []);
 
   /**
-   * Open the PopUp.
+   * Open the PopOver.
    */
   const openPopUp = () => {
     setVisibility(true);
   };
 
   /**
-   * Close the PopUp.
+   * Close the PopOver.
    */
   const closePopUp = () => {
     setVisibility(false);
   };
 
   /**
-   * Toggle PopUp visibility.
+   * Toggle PopOver visibility.
    */
   const togglePopUp = () => {
     setVisibility(!visibility);
   };
 
   /**
-   * The React component for rendering the Pop-up modal portal.
+   * The React component for rendering the Pop-over portal.
    *
    * @param {object} props - The component props.
-   * @param {React.ReactNode} props.children - The children to render within the portal.
-   * @returns {React.Component| null} - The rendered PopUp modal portal.
+   * @param {React.ReactNode} props.children - The children to render within the portal component.
+   * @returns {React.Component| null} - The rendered PopOver portal.
    */
   const PopUp = ({ children }) => (
     <Portal visibility={visibility} target={modalRef.current}>
