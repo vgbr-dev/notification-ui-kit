@@ -105,10 +105,18 @@ const usePopOver = ({ position = { x: 0, y: 0 }, className, id }) => {
       }
     };
 
+    const handleKeyDown = event => {
+      if (event.key === 'Escape') {
+        setVisibility(false);
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
