@@ -229,18 +229,18 @@ const useDraggableModal = ({ initialPosition = { x: 0, y: 0 }, className, id }) 
    * @param {React.ReactNode} props.children - The children to render within the portal.
    * @returns {React.Component| null} - The rendered modal portal.
    */
-  const PortalWrapper = ({ children }) => (
+  const Modal = ({ children }) => (
     <Portal visibility={visibility} target={modalRef.current}>
       {children}
     </Portal>
   );
 
-  PortalWrapper.propTypes = {
+  Modal.propTypes = {
     children: PropTypes.node.isRequired,
   };
 
   return {
-    Portal: PortalWrapper,
+    Modal,
     handleMouseDown,
     openModal,
     closeModal,
