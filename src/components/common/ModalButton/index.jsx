@@ -38,7 +38,7 @@ const ModalButton = ({ children }) => {
         Modal
       </button>
       <Modal>
-        <TitleBar title="Modal" close={closeModal} onMouseDown={handleMouseDown} />
+        <TitleBar title="Movable Modal" close={closeModal} onMouseDown={handleMouseDown} />
         {children}
       </Modal>
     </React.Fragment>
