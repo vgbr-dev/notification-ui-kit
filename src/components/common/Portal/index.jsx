@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  * component's hierarchy.
  *
  * @component
- * @param {Object} props - The component props.
+ * @param {Object} props - The component properties.
  * @param {React.ReactNode} props.children - The children to render within the portal.
  * @param {boolean} props.visibility - Indicates whether the portal should be visible or hidden.
  * @param {HTMLElement} props.target - The target element where the portal should be rendered.
