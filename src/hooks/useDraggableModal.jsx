@@ -225,7 +225,7 @@ const useDraggableModal = ({ initialPosition = { x: 0, y: 0 }, className, id }) 
   /**
    * The React component for rendering the modal portal.
    *
-   * @param {object} props - The component props.
+   * @param {object} props - The component properties.
    * @param {React.ReactNode} props.children - The children to render within the portal.
    * @returns {React.Component| null} - The rendered modal portal.
    */
