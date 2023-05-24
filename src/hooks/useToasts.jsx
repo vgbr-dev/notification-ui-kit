@@ -89,7 +89,6 @@ const useToasts = () => {
       title,
       description,
       autoClose,
-      isClosing: !autoClose,
     };
     setToasts([...toasts, toast]);
   };
