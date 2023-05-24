@@ -1,12 +1,12 @@
 /**
  * @file Manage `useToasts` custom Hook, for managing toasts.
  * @module useToasts
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT REACT MODULES
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 // ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
@@ -18,7 +18,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * @property {string}  title       - The title of the toast.
  * @property {string}  description - The description of the toast.
  * @property {boolean} autoClose   - Determines if the toast should automatically close.
- * @property {boolean} isClosing   - Indicates if the toast is currently closing.
  */
 
 /**
@@ -48,14 +47,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * @property {addToast}   addToast   - Function to add a new toast.
  */
 
-// ━━ CONSTANTS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-/**
- * The delay in milliseconds for automatically closing a toast.
- *
- * @constant {number} AUTO_CLOSE_DELAY
- */
-const AUTO_CLOSE_DELAY = 5000; // 5 seconds
-
 // ━━ FUNCTIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
  * Generates a unique ID for a toast.
@@ -72,16 +63,15 @@ const createToastId = () => `${Date.now().toString(36)}-${Math.random().toString
  */
 const useToasts = () => {
   const [toasts, setToasts] = useState([]);
-  const toastTimersRef = useRef([]);
 
   /**
    * Closes a toast with the specified ID.
    *
    * @param {number} id - The ID of the toast to close.
    */
-  const closeToast = useCallback(id => {
+  const closeToast = id => {
     setToasts(previous => previous.filter(toast => toast.id !== id));
-  }, []);
+  };
 
   /**
    * Adds a new toast.
@@ -100,33 +90,9 @@ const useToasts = () => {
       description,
       autoClose,
       isClosing: !autoClose,
-      duration: AUTO_CLOSE_DELAY,
     };
-
-    setToasts(previous => [...previous, toast]);
+    setToasts([...toasts, toast]);
   };
-
-  const cleanupToastTimers = useCallback(toastTimers => {
-    toastTimers.forEach(timerId => clearTimeout(timerId));
-  }, []);
-
-  useEffect(() => {
-    cleanupToastTimers(toastTimersRef.current);
-    toastTimersRef.current = [];
-
-    toasts.forEach(toast => {
-      if (toast.autoClose) {
-        const timerId = setTimeout(() => {
-          closeToast(toast.id);
-        }, toast.duration);
-        toastTimersRef.current.push(timerId);
-      }
-    });
-
-    return () => {
-      cleanupToastTimers(toastTimersRef.current);
-    };
-  }, [toasts, closeToast, cleanupToastTimers]);
 
   return {
     toasts,
