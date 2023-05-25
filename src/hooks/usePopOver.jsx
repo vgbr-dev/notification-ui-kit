@@ -66,6 +66,7 @@ import PropTypes from 'prop-types';
 /**
  * Append the element to the body.
  *
+ * @private
  * @param {HTMLElement} element - The element to be appended.
  */
 const appendChildToBody = element => {
