@@ -15,28 +15,28 @@ Custom React hook for managing a draggable `Modal` component.
 
 The initial position of the modal (default: { x: 0, y: 0 }).
 
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| x        | string | The initial position on the x-axis. |
-| y        | string | The initial position on the y-axis. |
+| Property | Type     | Description                         |
+|----------|----------|-------------------------------------|
+| x        | `string` | The initial position on the x-axis. |
+| y        | `string` | The initial position on the y-axis. |
 
 ### DraggableModalOptions
 
 The options for the `useDraggableModal` custom hook.
 
-| Property        | Type            | Description                                                  |
-|-----------------|-----------------|--------------------------------------------------------------|
-| initialPosition | InitialPosition | The initial position of the modal (default: { x: 0, y: 0 }). |
-| className       | string          | The CSS class name for the modal.                            |
-| id              | string          | The ID attribute for the modal.                              |
+| Property        | Type              | Description                                                  |
+|-----------------|-------------------|--------------------------------------------------------------|
+| initialPosition | `InitialPosition` | The initial position of the modal (default: { x: 0, y: 0 }). |
+| className       | `string`          | The CSS class name for the modal.                            |
+| id              | `string`          | The ID attribute for the modal.                              |
 
 ## HandleMouseDown
 
 The function to handle the mouse down event.
 
-| Property | Type                                            | Description           | Parameter | Type | Description |
-|----------|-------------------------------------------------|-----------------------|-----------|------|-------------|
-| event    | React.MouseEvent&lt;HTMLElement, MouseEvent&gt; | The mouse down event. |
+| Property | Type                                              | Description           |
+|----------|---------------------------------------------------|-----------------------|
+| event    | `React.MouseEvent&lt;HTMLElement, MouseEvent&gt;` | The mouse down event. |
 
 ## `OpenModal() => void`
 
@@ -54,13 +54,13 @@ The function to toggle the state of the draggable `Modal` component between `ope
 
 And object with The draggable `Modal` object and functions to manage it's state
 
-| Property        | Type            | Description                                         |
-|-----------------|-----------------|-----------------------------------------------------|
-| Modal           | React.Component | The React component for rendering the modal portal. |
-| handleMouseDown | HandleMouseDown | The function to handle the mouse down event.        |
-| openModal       | OpenModal       | The function to open the modal.                     |
-| closeModal      | CloseModal      | The function to close the modal.                    |
-| toggleModal     | ToggleModal     | The function to toggle modal visibility.            |
+| Property        | Type              | Description                                         |
+|-----------------|-------------------|-----------------------------------------------------|
+| Modal           | `React.Component` | The React component for rendering the modal portal. |
+| handleMouseDown | `HandleMouseDown` | The function to handle the mouse down event.        |
+| openModal       | `OpenModal`       | The function to open the modal.                     |
+| closeModal      | `CloseModal`      | The function to close the modal.                    |
+| toggleModal     | `ToggleModal`     | The function to toggle modal visibility.            |
 
 ## Custom Hook
 
@@ -68,9 +68,9 @@ And object with The draggable `Modal` object and functions to manage it's state
 
 Custom React hook for managing a draggable modal.
 
-| Parameter | Type                  | Description                          |
-|-----------|-----------------------|--------------------------------------|
-| options   | DraggableModalOptions | The options for the draggable modal. |
+| Parameter | Type                    | Description                          |
+|-----------|-------------------------|--------------------------------------|
+| options   | `DraggableModalOptions` | The options for the draggable modal. |
 
 Returns: `DraggableModalHook` - And object with The draggable `Modal` object and functions to manage it's state.
 
