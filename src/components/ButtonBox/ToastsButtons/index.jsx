@@ -7,12 +7,22 @@
 // » IMPORT REACT MODULES
 import React from 'react';
 
+// » IMPORT REACT MODULES
+import TOASTS_PROPERTIES from './toastsProperties';
+
 // » IMPORT HOOKS
 import useToasts from '../../../hooks/useToasts';
 import Toasts from '../../common/Toasts';
 
 // » IMPORT COMPONENTS
 import Button from '../../common/Button';
+
+// ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/**
+ * The type of the toast (success, error, information, warning).
+ *
+ * @typedef {"SUCCESS"|"ERROR"|"INFO"|"WARNING"}  ToastType
+ */
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
