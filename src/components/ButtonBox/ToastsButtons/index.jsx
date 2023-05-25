@@ -31,7 +31,7 @@ import Button from '../../common/Button';
  * @returns {JSX.Element} The rendered component.
  */
 const ToastsButtons = () => {
-  const { Toasts, addToast } = useToasts();
+  const { toastsContainer, addToast } = useToasts();
 
   /**
    * Creates a toast notification based on the specified type.
@@ -49,7 +49,7 @@ const ToastsButtons = () => {
       <Button modifier="warning" text="Warning" onClick={() => createToast('WARNING')} />
       <Button modifier="information" text="Information" onClick={() => createToast('INFO')} />
       <Button modifier="success" text="Success" onClick={() => createToast('SUCCESS')} />
-      {Toasts}
+      {toastsContainer}
     </React.Fragment>
   );
 };
