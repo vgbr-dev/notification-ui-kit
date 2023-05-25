@@ -31,7 +31,7 @@ import Button from '../../common/Button';
  * @returns {JSX.Element} The rendered component.
  */
 const ToastsButtons = () => {
-  const { toasts, addToast, closeToast } = useToasts();
+  const { Toasts, addToast } = useToasts();
 
   const addSuccesToast = () => {
     addToast({
