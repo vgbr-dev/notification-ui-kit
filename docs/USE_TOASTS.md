@@ -15,13 +15,13 @@ Version: 1.3.0
 
 ### Toast
 
-| Property    | Type    | Description                                                   |
-|-------------|---------|---------------------------------------------------------------|
-| id          | string  | The unique ID of the toast.                                   |
-| type        | string  | The type of the toast (success, error, information, warning). |
-| title       | string  | The title of the toast.                                       |
-| description | string  | The description of the toast.                                 |
-| autoClose   | boolean | Determines if the toast should automatically close.           |
+| Property    | Type      | Description                                                   |
+|-------------|-----------|---------------------------------------------------------------|
+| id          | `string`  | The unique ID of the toast.                                   |
+| type        | `string`  | The type of the toast (success, error, information, warning). |
+| title       | `string`  | The title of the toast.                                       |
+| description | `string`  | The description of the toast.                                 |
+| autoClose   | `boolean` | Determines if the toast should automatically close.           |
 
 ### Toasts
 
@@ -31,37 +31,37 @@ Represents an array of toasts.
 
 Function to close a toast notification.
 
-| Parameter | Type   | Description                   |
-|-----------|--------|-------------------------------|
-| id        | number | The ID of the toast to close. |
+| Parameter | Type     | Description                   |
+|-----------|----------|-------------------------------|
+| id        | `number` | The ID of the toast to close. |
 
 ### AddToastOptions
 
 The options to create toast notifications.
 
-| Property    | Type    | Description                                                   |
-|-------------|---------|---------------------------------------------------------------|
-| type        | string  | The type of the toast (success, error, information, warning). |
-| title       | string  | The title of the toast.                                       |
-| description | string  | The description of the toast.                                 |
-| autoClose   | boolean | Determines if the toast should automatically close.           |
+| Property    | Type      | Description                                                   |
+|-------------|-----------|---------------------------------------------------------------|
+| type        | `string`  | The type of the toast (success, error, information, warning). |
+| title       | `string`  | The title of the toast.                                       |
+| description | `string`  | The description of the toast.                                 |
+| autoClose   | `boolean` | Determines if the toast should automatically close.           |
 
 ### `addToast(toast: AddToastOptions) => void`
 
 Function to add a new toast notification.
 
-| Parameter | Type            | Description                    |
-|-----------|-----------------|--------------------------------|
-| toast     | AddToastOptions | The options for the new toast. |
+| Parameter | Type              | Description                    |
+|-----------|-------------------|--------------------------------|
+| toast     | `AddToastOptions` | The options for the new toast. |
 
 ### ToastsHook
 
 Represents the useToasts custom hook for managing toasts.
 
-| Property        | Type             | Description                               |
-|-----------------|------------------|-------------------------------------------|
-| toastsContainer | HTMLElement|null | The DOM container element for the toasts. |
-| addToast        | addToast         | Function to add a new toast notification. |
+| Property        | Type                 | Description                               |
+|-----------------|----------------------|-------------------------------------------|
+| toastsContainer | `HTMLElement`|`null` | The DOM container element for the toasts. |
+| addToast        | `addToast`           | Function to add a new toast notification. |
 
 ## Custom Hook
 
