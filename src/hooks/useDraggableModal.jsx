@@ -123,7 +123,7 @@ const checkBoundaries = (x, y, target) => {
 
 // ━━ CUSTOM HOOK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * Custom React hook for managing a draggable modal.
+ * Custom React hook for managing a draggable `Modal` component.
  *
  * @param {DraggableModalOptions} options - The options for the draggable modal.
  * @returns {DraggableModalHook} - The draggable Modal object.
