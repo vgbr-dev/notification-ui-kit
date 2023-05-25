@@ -68,7 +68,7 @@ import Portal from '../components/common/Portal';
 
 /**
  * The function to toggle the state of the draggable `Modal` component
- * between `open`and `closed`.
+ * between `open` and `closed`.
  *
  * @typedef {() => void} ToggleModal
  */
@@ -81,7 +81,7 @@ import Portal from '../components/common/Portal';
  * @property {HandleMouseDown} handleMouseDown    - The function to handle the mouse down event.
  * @property {OpenModal}       openModal          - The function to open the modal.
  * @property {CloseModal}      closeModal         - The function to close the modal.
- * @property {ToggleModal}     toggleModal        - The function to toggle modal visibility.
+ * @property {ToggleModal}     toggleModal        - The function to toggle the state of the draggable `Modal` component between `open` and `closed`.
  */
 
 // ━━ FUNCTIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -202,14 +202,14 @@ const useDraggableModal = ({ initialPosition = { x: 0, y: 0 }, className, id }) 
   );
 
   /**
-   * Open the modal.
+   * The function to open the draggable `Modal` component.
    */
   const openModal = () => {
     setVisibility(true);
   };
 
   /**
-   * Close the modal.
+   * The function to close the draggable `Modal` component.
    */
   const closeModal = () => {
     setVisibility(false);
@@ -217,7 +217,8 @@ const useDraggableModal = ({ initialPosition = { x: 0, y: 0 }, className, id }) 
   };
 
   /**
-   * Toggle modal visibility.
+   * The function to toggle the state of the draggable `Modal` component
+   * between `open` and `closed`.
    */
   const toggleModal = () => {
     setVisibility(!visibility);
