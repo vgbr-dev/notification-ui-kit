@@ -70,7 +70,9 @@ import PropTypes from 'prop-types';
  * @param {HTMLElement} element - The element to be appended.
  */
 const appendChildToBody = element => {
-  document.body.appendChild(element);
+  if (!document.body.contains(element)) {
+    document.body.appendChild(element);
+  }
 };
 
 // ━━ CUSTOM HOOK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
