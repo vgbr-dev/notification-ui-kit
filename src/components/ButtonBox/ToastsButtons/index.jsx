@@ -12,7 +12,6 @@ import TOASTS_PROPERTIES from './toastsProperties';
 
 // » IMPORT HOOKS
 import useToasts from '../../../hooks/useToasts';
-import Toasts from '../../common/Toasts';
 
 // » IMPORT COMPONENTS
 import Button from '../../common/Button';
