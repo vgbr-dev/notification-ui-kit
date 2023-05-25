@@ -33,49 +33,23 @@ import Button from '../../common/Button';
 const ToastsButtons = () => {
   const { Toasts, addToast } = useToasts();
 
-  const addSuccesToast = () => {
-    addToast({
-      type: 'success',
-      title: 'Exito!',
-      description: 'La operación fue exitosa.',
-      autoClose: true,
-    });
-  };
-
-  const addErrorToast = () => {
-    addToast({
-      type: 'error',
-      title: 'Error',
-      description: 'Hubo un error',
-      autoClose: true,
-    });
-  };
-
-  const addInfoToast = () => {
-    addToast({
-      type: 'information',
-      title: 'Information',
-      description: 'Esta es una notificación de información.',
-      autoClose: false,
-    });
-  };
-
-  const addWarningToast = () => {
-    addToast({
-      type: 'warning',
-      title: 'Warning',
-      description: 'Ten cuidado',
-      autoClose: false,
-    });
+  /**
+   * Creates a toast notification based on the specified type.
+   *
+   * @param {ToastType} type -El tipo de toast (success, error, information, warning).
+   */
+  const createToast = type => {
+    const toast = TOASTS_PROPERTIES[type];
+    addToast(toast);
   };
 
   return (
     <React.Fragment key="ButtonBox">
-      <Button modifier="success" text="Exito" onClick={addSuccesToast} />
-      <Button modifier="error" text="Error" onClick={addErrorToast} />
-      <Button modifier="information" text="Information" onClick={addInfoToast} />
-      <Button modifier="warning" text="Warning" onClick={addWarningToast} />
-      <Toasts toasts={toasts} closeToast={closeToast} />
+      <Button modifier="error" text="Error" onClick={() => createToast('ERROR')} />
+      <Button modifier="warning" text="Warning" onClick={() => createToast('WARNING')} />
+      <Button modifier="information" text="Information" onClick={() => createToast('INFO')} />
+      <Button modifier="success" text="Success" onClick={() => createToast('SUCCESS')} />
+      {Toasts}
     </React.Fragment>
   );
 };
