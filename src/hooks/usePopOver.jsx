@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 // ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * The position of the Pop-over (default: { x: 0, y: 0 }).
+ * The position of the `PopOver` component (default: { x: 0, y: 0 }).
  *
  * @typedef  {object} Position
  * @property {string} x        - The position on the x-axis.
@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
  */
 
 /**
- * The options for the Pop-over hook.
+ * The options for the `usePopOver` hook.
  *
  * @typedef  {object}   PopOverOptions
  * @property {string}   id                  - The ID attribute for the Pop-over.
@@ -35,19 +35,20 @@ import PropTypes from 'prop-types';
  */
 
 /**
- * The function to open the Pop-over component.
+ * The function to open the `PopOver` component.
  *
  * @typedef {() => void} OpenPopOver
  */
 
 /**
- * The function to close the Pop-over component.
+ * The function to close the `PopOver` component.
  *
  * @typedef {() => void} ClosePopOver
  */
 
 /**
- * The function to toggle the state (open/close) Pop-over component visibility.
+ * The function to toggle the state of `PopOver` component
+ * between `open` and `closed`.
  *
  * @typedef {() => void} TogglePopOver
  */
@@ -126,21 +127,23 @@ const usePopOver = ({ id, className, closeOnClickOutside = false, position = { x
   }, [closeOnClickOutside]);
 
   /**
-   * The function to open the Pop-over component.
+   * The function to open the `PopOver` component.
    */
   const openPopOver = () => {
     setVisibility(true);
   };
 
   /**
-   * The function to close the Pop-over component.
+   * The function to close the `PopOver` component.
    */
   const closePopOver = () => {
     setVisibility(false);
   };
 
   /**
-   * The function to toggle the state (open/close) Pop-over component visibility.
+   * The function to toggle the state of `PopOver` component
+   * between `open` and `closed`.
+   *
    */
   const togglePopOver = () => {
     setVisibility(!visibility);
