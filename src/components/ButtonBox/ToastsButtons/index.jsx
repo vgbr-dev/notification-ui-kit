@@ -7,7 +7,7 @@
 // » IMPORT REACT MODULES
 import React from 'react';
 
-// » IMPORT REACT MODULES
+// » IMPORT MODULES
 import TOASTS_PROPERTIES from './toastsProperties';
 
 // » IMPORT HOOKS
