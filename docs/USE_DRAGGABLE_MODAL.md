@@ -1,6 +1,6 @@
 # useDraggableModal
 
-Manage useDraggableModal custom React Hook.
+Custom React hook for managing a draggable `Modal` component.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ The initial position of the modal (default: { x: 0, y: 0 }).
 
 ### DraggableModalOptions
 
-The options for the draggable modal.
+The options for the `useDraggableModal` custom hook.
 
 | Property        | Type            | Description                                                  |
 |-----------------|-----------------|--------------------------------------------------------------|
