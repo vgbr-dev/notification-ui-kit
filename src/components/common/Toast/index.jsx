@@ -56,6 +56,13 @@ const icons = {
  */
 const AUTO_CLOSE_DELAY = 5000; // 5 seconds
 
+/**
+ * The delay in milliseconds for closing a toast.
+ *
+ * @constant {number} AUTO_CLOSE_DELAY
+ */
+const CLOSE_DELAY = 100; // 5 seconds
+
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
  * The `Toast` component.
