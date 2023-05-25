@@ -15,6 +15,7 @@ import Portal from '../components/common/Portal';
 /**
  *  Object representing the boundaries for a coordinate.
  *
+ * @private
  * @typedef  {object}  Boundary
  * @property {boolean} start    - Indicates whether the coordinate plus the offset is within the boundary start.
  * @property {boolean} end      - Indicates whether the coordinate plus the offset is within the boundary end.
@@ -23,6 +24,7 @@ import Portal from '../components/common/Portal';
 /**
  * Object representing the boundaries for both the x and y axes.
  *
+ * @private
  * @typedef  {object}   Boundaries
  * @property {Boundary} x          - Information about the boundaries on the x-axis.
  * @property {Boundary} y          - Information about the boundaries on the y-axis.
@@ -47,6 +49,7 @@ import Portal from '../components/common/Portal';
 
 /**
  * The function to handle the mouse down event.
+ *
  *
  * @typedef {(event: React.MouseEvent<HTMLElement, MouseEvent>) => void} HandleMouseDown
  */

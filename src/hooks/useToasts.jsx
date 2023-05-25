@@ -64,6 +64,7 @@ import Toast from '../components/common/Toast';
 /**
  * Generates a unique ID for a toast.
  *
+ * @private
  * @returns {string} The unique ID.
  */
 const createToastId = () => `${Date.now().toString(36)}-${Math.random().toString(36).substr(2)}`;
@@ -71,6 +72,7 @@ const createToastId = () => `${Date.now().toString(36)}-${Math.random().toString
 /**
  * Retrieves or creates a portal element based on the provided ID and className.
  *
+ * @private
  * @param {string} id - The ID of the portal element.
  * @param {string} className - The CSS class name to be applied to the portal element.
  * @returns {HTMLElement} - The portal element.
@@ -92,6 +94,7 @@ const getPortalElement = (id, className) => {
 /**
  * Appends the provided element to the document body if it doesn't already exist.
  *
+ * @private
  * @param {HTMLElement} element - The element to be appended to the body.
  */
 const appendChildToBody = element => {
@@ -103,6 +106,7 @@ const appendChildToBody = element => {
 /**
  * Removes the provided element from the document body.
  *
+ * @private
  * @param {HTMLElement} element - The element to be removed from the body.
  */
 const removeChildFromBody = element => {
