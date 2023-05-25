@@ -1,6 +1,6 @@
 {
   "name": "notification-ui-kit",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "description": "A code repository that stores components for toasts, popups, and modals for potential future use in web development projects.",
   "keywords": [
