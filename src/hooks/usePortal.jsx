@@ -17,25 +17,28 @@ import PropTypes from 'prop-types';
 
 // ━━ TYPE DEFINITIONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 /**
- * @typedef  {Object} PortalOptions - The options for the portal.
+ * The options for the `usePortal` custom hook.
+ *
+ * @typedef  {Object} PortalOptions
  * @property {string} id            - The ID of the portal element. Defaults to `portal` if not provided.
  * @property {string} className     - The CSS class name to be applied to the portal element.
  */
 
 /**
- * The function to open the Portal component.
+ * The function to open the `Portal` component.
  *
  * @typedef {() => void} OpenPortal
  */
 
 /**
- * The function to close the Portal component.
+ * The function to close the `Portal` component.
  *
  * @typedef {() => void} ClosePortal
  */
 
 /**
- * The function to toggle the state of the Portal component between `open` and `closed`.
+ * The function to toggle the state of the `Portal` component between `open`
+ * and `closed`.
  *
  * @typedef {() => void} TogglePortal
  */

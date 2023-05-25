@@ -39,7 +39,7 @@ import Portal from '../components/common/Portal';
  */
 
 /**
- * The options for the draggable modal.
+ * The options for the `useDraggableModal` custom hook.
  *
  * @typedef  {object}          DraggableModalOptions
  * @property {InitialPosition} initialPosition       - The initial position of the modal (default: { x: 0, y: 0 }).
@@ -55,25 +55,26 @@ import Portal from '../components/common/Portal';
  */
 
 /**
- * The function to open the modal.
+ * The function to open the draggable `Modal` component.
  *
  * @typedef {() => void} OpenModal
  */
 
 /**
- * The function to close the modal.
+ * The function to close the draggable `Modal` component.
  *
  * @typedef {() => void} CloseModal
  */
 
 /**
- * The function to toggle modal visibility.
+ * The function to toggle the state of the draggable `Modal` component
+ * between `open`and `closed`.
  *
  * @typedef {() => void} ToggleModal
  */
 
 /**
- * The draggable modal object.
+ * And object with The draggable `Modal` object and functions to manage it's state
  *
  * @typedef  {object}          DraggableModalHook
  * @property {React.Component} Modal              - The React component for rendering the modal portal.
@@ -125,7 +126,7 @@ const checkBoundaries = (x, y, target) => {
  * Custom React hook for managing a draggable modal.
  *
  * @param {DraggableModalOptions} options - The options for the draggable modal.
- * @returns {DraggableModalHook} - The draggable modal object.
+ * @returns {DraggableModalHook} - The draggable Modal object.
  * @example const { Portal, handleMouseDown, toggleModal, closeModal } = useDraggableModal(options);
  */
 const useDraggableModal = ({ initialPosition = { x: 0, y: 0 }, className, id }) => {

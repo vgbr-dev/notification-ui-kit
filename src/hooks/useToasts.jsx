@@ -1,5 +1,5 @@
 /**
- * @file Manage `useToasts` custom Hook, for managing toasts.
+ * @file The `useToasts` custom hook for managing toasts notification system.
  * @module useToasts
  * @version 1.3.0
  */
