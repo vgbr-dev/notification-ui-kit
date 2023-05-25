@@ -77,7 +77,7 @@ const appendChildToBody = element => {
  * Custom React hook for managing a Pop-over component.
  *
  * @param {PopOverOptions} options - The options for the Pop-over hook.
- * @returns {PopOverHook} - The Pop-over modal object.
+ * @returns {PopOverHook} - An object containing Pop-over component-related functions and state.
  * @example const { PopOver, togglePopOver, closePopOver } = usePopOver(options);
  */
 const usePopOver = ({ id, className, closeOnClickOutside = false, position = { x: 0, y: 0 } }) => {
