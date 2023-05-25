@@ -1,6 +1,6 @@
 # useToasts
 
-Manage useToasts custom Hook for managing toasts.
+The `useToasts` custom hook for managing toasts notification system.
 
 Version: 1.3.0
 
@@ -66,7 +66,7 @@ Represents the useToasts custom hook for managing toasts.
 
 ### `useToasts() => ToastsHook`
 
-The `useToasts` custom hook for managing toasts.
+The `useToasts` custom hook for managing toasts notification system.
 
 Returns: ToastsHook - An object with `toastsContainer` and `addToast` functions to manage toasts.
 
