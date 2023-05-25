@@ -27,7 +27,7 @@ Version: 1.3.0
 
 Represents an array of toasts.
 
-### closeToast
+### `closeToast() => void`
 
 Function to close a toast notification.
 
@@ -46,7 +46,7 @@ The options to create toast notifications.
 | description | string  | The description of the toast.                                 |
 | autoClose   | boolean | Determines if the toast should automatically close.           |
 
-### addToast
+### `addToast(toast: AddToastOptions) => void`
 
 Function to add a new toast notification.
 
@@ -58,9 +58,10 @@ Function to add a new toast notification.
 
 Represents the useToasts custom hook for managing toasts.
 
-| Parameter | Type            | Description                    |
-|-----------|-----------------|--------------------------------|
-| toast     | AddToastOptions | The options for the new toast. |
+| Property        | Type             | Description                               |
+|-----------------|------------------|-------------------------------------------|
+| toastsContainer | HTMLElement|null | The DOM container element for the toasts. |
+| addToast        | addToast         | Function to add a new toast notification. |
 
 ## Custom Hook
 
