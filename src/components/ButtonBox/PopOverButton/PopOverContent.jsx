@@ -14,7 +14,7 @@ const PopOverContent = () => (
   <section className="popover-container__content">
     <h1>Hi! 😊</h1>
     <p>
-      I am a Pop-Over Modal, Press <kbd>ESC</kbd> if you want to close me
+      I am a Pop-Over, Press <kbd>ESC</kbd> if you want to close me
     </p>
   </section>
 );
