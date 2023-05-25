@@ -24,7 +24,7 @@ import PropTypes from 'prop-types';
  * @typedef  {object}   PopOverOptions
  * @property {string}   id                  - The ID attribute for the Pop-over.
  * @property {string}   className           - The CSS class name for the Pop-over.
- * @property {Position} Position            - The position of the Pop-over (default: { x: 0, y: 0 }).
+ * @property {Position} position            - The position of the Pop-over (default: { x: 0, y: 0 }).
  * @property {boolean}  closeOnClickOutside - Flag to control if the Pop-over should be closed when clicked outside (default: true).
  */
 
