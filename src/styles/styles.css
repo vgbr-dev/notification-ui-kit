@@ -187,7 +187,9 @@ kbd {
 /* » COMPONENT: button-box */
 .button-box {
   display: flex;
+  width: 810px;
   flex-flow: row nowrap;
+  justify-content: center;
 	gap: 20px;
 }
 
