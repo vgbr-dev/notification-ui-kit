@@ -5,36 +5,18 @@
 
 // ━━ IMPORT MODULES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // » IMPORT REACT MODULES
-import React, { useEffect } from 'react';
+import React from 'react';
 import { PropTypes } from 'prop-types';
-
-// » IMPORT CUSTOM HOOKS
-import usePortal from '../../../hooks/usePortal';
 
 // » IMPORT COMPONENTS
 import Toast from '../Toast';
 
 // ━━ COMPONENT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-const Toasts = ({ toasts, closeToast }) => {
-  const { Portal, openPortal, closePortal } = usePortal({
-    id: 'toasts-container',
-    className: 'toasts',
-  });
-
-  useEffect(() => {
-    if (toasts.length < 1) {
-      closePortal();
-    } else {
-      openPortal();
-    }
-  }, [closePortal, openPortal, toasts.length]);
-
-  return (
-    <Portal>
-      {React.Children.toArray(toasts.map(items => <Toast toast={items} closeToast={closeToast} />))}
-    </Portal>
-  );
-};
+const Toasts = ({ toasts, closeToast }) => (
+  <div id="toasts-container" className="toasts">
+    {React.Children.toArray(toasts.map(item => <Toast toast={item} closeToast={closeToast} />))}
+  </div>
+);
 
 Toasts.propTypes = {
   toasts: PropTypes.arrayOf(
