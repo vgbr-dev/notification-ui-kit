@@ -85,7 +85,7 @@ const Toast = ({ toast, closeToast }) => {
     setToastClass(previous => `${previous} toast--closing`);
     setTimeout(() => {
       closeToast(toast.id);
-    }, 200);
+    }, CLOSE_DELAY);
   };
 
   useEffect(() => {
